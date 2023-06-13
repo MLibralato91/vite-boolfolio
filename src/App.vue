@@ -4,7 +4,7 @@
       <h1>{{ title }}</h1>
       <div class="row">
         <div class="col" v-for="(project, index) in projects" :key="project.id">
-          {{ project.name }}
+          {{ project.title }}
         </div>
       </div>
     </div>
@@ -13,7 +13,7 @@
 
 <script>
 
-import { axios } from 'axios';
+import axios from 'axios';
 import { resolveTransitionHooks } from 'vue';
 
 export default {
