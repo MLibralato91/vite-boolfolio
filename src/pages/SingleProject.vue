@@ -1,7 +1,18 @@
 <template>
   <div v-if="project">
-    <h1>{{ project.title }}</h1>
+    <div class="col-3 ">
+      <div class="cardCarousel">
+        <div class="boxImg">
+          <img :src="project.image" alt="">
+        </div>
+        <div class="title d-flex justify-content-between small">
+          <h6 class="fw-bolder">{{ project.title }}</h6>
+          <p> role </p>
+        </div>
+      </div>
+    </div>
   </div>
+
   <div v-else>
     <LoaderApp />
   </div>
@@ -40,4 +51,22 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.cardCarousel {
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.title {
+  padding: 20px;
+  padding-top: 30px;
+}
+</style>

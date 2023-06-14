@@ -85,7 +85,7 @@ footer {
 
   background-image: linear-gradient(180deg, #08123d, #020332);
   color: white;
-  padding-top: 150px;
+  ;
 }
 
 p {
