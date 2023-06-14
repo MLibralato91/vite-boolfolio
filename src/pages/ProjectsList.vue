@@ -9,7 +9,9 @@
             <h5 class="card-title">{{ project.title }}</h5>
             <p class="card-text">{{ project.description }}</p>
             <p class="card-text">{{ project.type.name }}</p>
-            <a href="#" class="btn btn-primary">Dettagli</a>
+            <!-- <a href="#" class="btn btn-primary">Dettagli</a> -->
+            <router-link class="btn btn-primary"
+              :to="{ name: 'single-project', params: { slug: project.slug } }">Dettagli</router-link>
           </div>
         </div>
       </div>
