@@ -2,12 +2,19 @@
   <div v-if="project">
     <h1>{{ project.title }}</h1>
   </div>
+  <div v-else>
+    <LoaderApp />
+  </div>
 </template>
 
 <script>
 import axios from 'axios';
+import LoaderApp from '../components/LoaderApp.vue';
 export default {
   name: 'SingleProject',
+  components: {
+    LoaderApp,
+  },
   data() {
     return {
       project: null,
